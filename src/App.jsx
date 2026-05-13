@@ -672,7 +672,6 @@ export default function BibleBeeGame() {
   const CATEGORIES  = mode === "hs" ? HS_CATEGORIES  : UNI_CATEGORIES;
   const QUESTIONS   = mode === "hs" ? HS_QUESTIONS   : UNI_QUESTIONS;
   const Q_COUNT     = mode === "hs" ? HS_Q_COUNT     : UNI_Q_COUNT;
-  const CAT_Q_COUNT = mode === "hs" ? HS_CAT_Q_COUNT : UNI_CAT_Q_COUNT;
 
   const k = (cat, diff, idx) => `${cat}||${diff}||${idx}`;
 
