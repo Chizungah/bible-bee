@@ -421,8 +421,9 @@ const styles = `
   }
   .mode-btn:hover { background:rgba(255,255,255,0.15); transform:scale(1.04); }
   .saved-note {
-    margin-top:0.8rem; font-size:0.9rem; font-weight:700;
+    font-size:0.9rem; font-weight:700;
     color:rgba(255,255,255,0.5); letter-spacing:0.18em; text-transform:uppercase;
+    position:fixed; bottom:1.4rem; left:50%; transform:translateX(-50%); white-space:nowrap;
   }
   .reset-link {
     position:fixed; bottom:1.4rem; right:1.6rem; z-index:10;
@@ -621,7 +622,7 @@ const styles = `
     .home-finals { font-size:14vw; margin-bottom:2rem; }
     .mode-btns { flex-direction:column; align-items:center; gap:1rem; }
     .mode-btn { font-size:5vw; padding:1rem 8vw; border-width:2px; width:70vw; text-align:center; }
-    .saved-note { font-size:2.8vw; white-space:normal; text-align:center; width:80%; position:static; transform:none; margin-top:1.5rem; left:auto; bottom:auto; }
+    .saved-note { font-size:2.8vw; white-space:normal; text-align:center; width:80%; bottom:5rem; left:50%; transform:translateX(-50%); }
     .reset-link { font-size:2.8vw; bottom:1.8rem; right:1.5rem; }
 
     /* CATEGORIES */
@@ -759,7 +760,7 @@ export default function BibleBeeGame() {
               <button className="mode-btn" onClick={() => { setMode("uni"); setScreen("categories"); }}>Universities</button>
               <button className="mode-btn" onClick={() => { setMode("hs");  setScreen("categories"); }}>High Schools</button>
             </div>
-           <p className="saved-note" style={{position:"fixed", bottom:"1.4rem", left:"50%", transform:"translateX(-50%)", whiteSpace:"nowrap"}}>
+           <p className="saved-note">
   {Object.keys(usedUni).length} UNIVERSITY QUESTION{Object.keys(usedUni).length !== 1 ? "S" : ""} ANSWERED &nbsp;|&nbsp; {Object.keys(usedHS).length} HIGH SCHOOL QUESTION{Object.keys(usedHS).length !== 1 ? "S" : ""} ANSWERED
 </p>
             <button className="reset-link" onClick={() => setShowReset(true)}>Reset All</button>

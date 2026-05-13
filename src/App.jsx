@@ -622,7 +622,7 @@ const styles = `
     .home-finals { font-size:14vw; margin-bottom:2rem; }
     .mode-btns { flex-direction:column; align-items:center; gap:1rem; }
     .mode-btn { font-size:5vw; padding:1rem 8vw; border-width:2px; width:70vw; text-align:center; }
-    .saved-note { font-size:2.8vw; white-space:normal; text-align:center; width:80%; position:static; transform:none; margin-top:1.5rem; left:auto; bottom:auto; }
+    .saved-note { font-size:2.8vw; white-space:normal; text-align:center; width:80%; bottom:5rem; left:50%; transform:translateX(-50%); }
     .reset-link { font-size:2.8vw; bottom:1.8rem; right:1.5rem; }
 
     /* CATEGORIES */
