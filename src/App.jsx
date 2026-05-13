@@ -621,20 +621,23 @@ const styles = `
     .home-finals { font-size:14vw; margin-bottom:2rem; }
     .mode-btns { flex-direction:column; align-items:center; gap:1rem; }
     .mode-btn { font-size:5vw; padding:1rem 8vw; border-width:2px; width:70vw; text-align:center; }
+    .saved-note { font-size:2.8vw; white-space:normal; text-align:center; width:80%; position:static; transform:none; margin-top:1.5rem; left:auto; bottom:auto; }
+    .reset-link { font-size:2.8vw; bottom:1.8rem; right:1.5rem; }
 
     /* CATEGORIES */
     .cats-screen { padding:1.5rem 1.2rem 3rem; justify-content:flex-start; min-height:100vh; overflow-y:auto; height:auto; }
     .cats-title { font-size:8vw; margin-bottom:0.3rem; }
     .mode-tag { font-size:3.5vw; margin-bottom:1.5rem; }
-    .cats-grid { grid-template-columns:1fr; gap:0; width:95%; }
-    .cat-block { gap:0.6rem; margin-bottom:2rem; }
+    .cats-grid { grid-template-columns:1fr; gap:2rem; width:95%; }
+    .cat-block { gap:0.6rem; }
     .cat-label { font-size:5vw; padding:0.9rem 1rem; border-width:2px; border-radius:12px; }
     .diff-pill { font-size:4.5vw; padding:0.8rem 1rem; border-radius:50px; }
-    .cats-home-btn { font-size:4.5vw; padding:0.8rem 2.5rem; margin:1rem auto 0; border-width:2px; }
+    .cats-home-btn { font-size:4.5vw; padding:0.8rem 2.5rem; margin:1.5rem auto 0; border-width:2px; }
 
     /* BOARD */
+    .board-screen { justify-content:center; }
     .diff-badge { font-size:4.5vw; padding:0.5rem 2rem; }
-    .board-title { font-size:9vw; margin-bottom:3rem; }
+    .board-title { font-size:9vw; margin-bottom:2.5rem; }
     .numbers-wrap { display:grid; grid-template-columns:repeat(2,1fr); gap:1.2rem; width:75vw; margin:0 auto 3rem auto; justify-items:center; }
     .num-btn { width:100%; height:18vw; font-size:9vw; border-radius:4vw; }
     .cats-back-btn { font-size:4.5vw; padding:0.8rem 2.5rem; }
@@ -642,19 +645,15 @@ const styles = `
     /* QUESTION */
     .q-screen { padding:2rem 1.5rem; justify-content:center; }
     .q-num-pill { width:16vw; height:12vw; font-size:7vw; margin-bottom:1.5rem; }
-    .q-card { padding:2rem 1.8rem; border-radius:1.5rem; margin-bottom:2rem; }
+    .q-card { padding:2rem 1.8rem; border-radius:2rem; margin-bottom:2rem; }
     .q-text { font-size:5.5vw; }
     .answer-reveal-btn { font-size:5vw; padding:1rem 3rem; }
 
     /* ANSWER */
     .check-circle { width:12vw; height:12vw; }
     .check-wrap { margin-bottom:-3rem; }
-    .a-card { padding:3rem 1.8rem 2rem; border-radius:1.5rem; min-height:25vw; margin-bottom:3rem; }
-    .a-text { font-size:clamp(1.4rem, 8vw, 3rem); }
-
-    /* MISC */
-    .saved-note { font-size:2.8vw; white-space:normal; text-align:center; width:65%; bottom:2.5rem; }
-    .reset-link { font-size:2.8vw; }
+    .a-card { padding:3.5rem 1.8rem 2.5rem; border-radius:2rem; min-height:25vw; margin-bottom:3rem; }
+    .a-text { font-size:clamp(1.8rem, 9vw, 3.5rem); }
   }
 `;
 
