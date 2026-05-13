@@ -11,23 +11,6 @@ const UNI_CATEGORIES = ["The Gospels", "Major Prophets", "Minor Prophets", "The 
 const HS_Q_COUNT  = { Easy: 6, Medium: 8, Hard: 6 };
 const UNI_Q_COUNT = { Easy: 7, Medium: 7, Hard: 7 };
 
-const HS_CAT_Q_COUNT = {
-  "The Pentateuch":    { Easy: 6, Medium: 8, Hard: 6 },
-  "Epistles":          { Easy: 6, Medium: 8, Hard: 6 },
-  "The Gospels":       { Easy: 6, Medium: 6, Hard: 6 },
-  "Major Prophets":    { Easy: 6, Medium: 8, Hard: 6 },
-  "Minor Prophets":    { Easy: 7, Medium: 7, Hard: 6 },
-  "General Knowledge": { Easy: 8, Medium: 8, Hard: 6 },
-};
-const UNI_CAT_Q_COUNT = {
-  "The Gospels":       { Easy: 7, Medium: 7, Hard: 7 },
-  "Major Prophets":    { Easy: 6, Medium: 7, Hard: 7 },
-  "Minor Prophets":    { Easy: 7, Medium: 8, Hard: 7 },
-  "The Pentateuch":    { Easy: 7, Medium: 7, Hard: 7 },
-  "General Knowledge": { Easy: 7, Medium: 7, Hard: 7 },
-  "Apocalyptic Books": { Easy: 7, Medium: 7, Hard: 7 },
-};
-
 const HS_QUESTIONS = {
   "The Pentateuch": {
     Easy: [
@@ -694,11 +677,11 @@ export default function BibleBeeGame() {
   const k = (cat, diff, idx) => `${cat}||${diff}||${idx}`;
 
   const isDiffAllDone = (cat, diff) => {
-    const total = CAT_Q_COUNT[cat]?.[diff] ?? Q_COUNT[diff];
-    return Array.from({ length: total }, (_, i) => i).every(i => usedQ[k(cat, diff, i)]);
+    const total = QUESTIONS[cat]?.[diff]?.length ?? 0;
+    return total > 0 && Array.from({ length: total }, (_, i) => i).every(i => usedQ[k(cat, diff, i)]);
   };
 
-  const boardCount = selCat && selDiff ? (CAT_Q_COUNT[selCat]?.[selDiff] ?? Q_COUNT[selDiff]) : 0;
+  const boardCount = selCat && selDiff ? (QUESTIONS[selCat]?.[selDiff]?.length ?? 0) : 0;
 
   const pickQ = (idx) => {
     if (usedQ[k(selCat, selDiff, idx)]) return;
