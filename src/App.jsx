@@ -340,16 +340,16 @@ const UNI_QUESTIONS = {
     ],
     Medium: [
       { q: "What do the four beasts in Daniel 7 represent?", a: "Kingdoms" },
-      { q: "In Daniel 3, where was a golden image erected to test loyalty through worship?", a: "Plain of Dura" },
       { q: "Which angel explains Daniel's visions to him?", a: "Gabriel" },
       { q: "How many horns appear on the fourth beast in Daniel's vision?", a: "Ten" },
+      { q: "In Revelation, what animal imagery combined brutality and authority in the sea-rising vision?", a: "Beast" },
       { q: "In Revelation, how many months symbolized oppression and endurance of the faithful?", a: "Forty-two months" },
       { q: "What number symbolized a sealed remnant drawn from all tribes?", a: "144,000" },
       { q: "Which book explicitly commands the sealing of visions until the time of the end?", a: "Daniel" },
     ],
     Hard: [
-      { q: "In Revelation, what animal imagery combined brutality and authority in the sea-rising vision?", a: "Beast" },
       { q: "What symbolic garment represented righteousness granted to the redeemed?", a: "White robes" },
+      { q: "In Daniel 3, where was a golden image erected to test loyalty through worship?", a: "Plain of Dura" },
       { q: "Which chapter of Daniel is written largely in Aramaic and introduces apocalyptic imagery?", a: "Daniel 7" },
       { q: "Which book portrays cosmic conflict between Michael and Satan?", a: "Revelation" },
       { q: "What period is described as 1,260 days in Revelation?", a: "Tribulation period" },
